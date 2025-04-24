@@ -1,0 +1,278 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">Serenity BDD Report</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="666a77cc370ac0f1a98a8e4292c212a8ebde18f72796f28dc9917b36d534b7cd.html">Automatizar Ver Nota En Sicau</a></span>
+                > <span class="truncate-60"><a
+                    href="39ab17f2320b1d61b177f647cc37d9fef66219f8f06a5ee1c9b7b9909aeb3405.html">automatizar proceso de ver nota </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 24-04-2025 00:50</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">Automatizar Ver Nota En Sicau </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="095fb70a5155b4b01be72b93f1b4c51cab27094796115f0e543dc2649da60779.html">Smoke Test
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="6fe0671aeea9e76b6998ee682216d11c7748a4152740df0586f3c256ecb3f5da.html">Chrome
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="f55cf301e8f51d63aebeb8bc8dbe880df940586e2a502c7a3e24c2b639523f8f.html">Windows
+                                </a>
+                                </span>
+                            </p>
+                            <p class="tag">
+                                <span class="badge tag-badge" style="background:default;"
+                                    <i class="bi bi-tag-fill"></i>&nbsp;<a class="tagLink" style="background:default;" href="59736924e81ea98f655ac8eba7cd96079d8d80131e0c4360daf32a724d0b38a0.html">Chrome, Windows
+                                </a>
+                                </span>
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">automatizar proceso de ver nota
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+    <div class="story-title">
+        <h3>Scenario:</h3>
+        <div class="scenario">Dado que me encuentro en la pagina '&lt;url&gt;'<br>Cuando inicie sesion con correo '&lt;correo&gt;' y contraseña '&lt;contraseña&gt;'<br>Y seleccione ver notas<br>Entonces visualizo la ventana con almenos la materia '&lt;materia&gt;'</div>
+    </div>
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="6a212a7abaeb0b6df067ab13295145fd3c1cb4c44babab7365b537b2a5a54f72.png" title=" 1: automatizar proceso de ver nota ({url=https://sicau.pascualbravo.edu.co/SICAU/Account/Login, correo=juan.castano166, contrase&ntilde;a=1018233166, materia=Grupo 001 ET0042 - CIRCUITOS DIGITALES})" width="1366"/>
+                <img src="6a212a7abaeb0b6df067ab13295145fd3c1cb4c44babab7365b537b2a5a54f72.png" title=" Dado que me encuentro en la pagina 'https://sicau.pascualbravo.edu.co/SICAU/Account/Login'" width="1366"/>
+                <img src="6a212a7abaeb0b6df067ab13295145fd3c1cb4c44babab7365b537b2a5a54f72.png" title=" robot opens the browser at https://sicau.pascualbravo.edu.co/SICAU/Account/Login" width="1366"/>
+                <img src="8d0b42645746a52ef25ab17006aaf4189a297d6ce684f61ef7e55c1044af7895.png" title=" Dado que me encuentro en la pagina 'https://sicau.pascualbravo.edu.co/SICAU/Account/Login' (completed)" width="1366"/>
+                <img src="8d0b42645746a52ef25ab17006aaf4189a297d6ce684f61ef7e55c1044af7895.png" title=" Cuando inicie sesion con correo 'juan.castano166' y contrase&ntilde;a '1018233166'" width="1366"/>
+                <img src="139e923555b078b38420d8ef27fbd7407bcbda382b7dce47f5a9d765c7015ffe.png" title=" robot enters 'juan.castano166' into Input para email" width="1366"/>
+                <img src="72c9d764860770c9550c828a44f30ef83159587ca0eb0d1fbd3706fbe28e8976.png" title=" robot enters 'juan.castano166' into Input para email (completed)" width="1366"/>
+                <img src="72c9d764860770c9550c828a44f30ef83159587ca0eb0d1fbd3706fbe28e8976.png" title=" robot enters '1018233166' into Input para contrase&ntilde;a" width="1366"/>
+                <img src="053d0a6eec0dae7f39dc1ba4a08c381e69113aa0880e9688c5403dfb8cd53326.png" title=" robot enters '1018233166' into Input para contrase&ntilde;a (completed)" width="1366"/>
+                <img src="053d0a6eec0dae7f39dc1ba4a08c381e69113aa0880e9688c5403dfb8cd53326.png" title=" robot clicks on Bot&oacute;n para iniciar sesi&oacute;n" width="1366"/>
+                <img src="dc68e798dae2d23c8032e288248b176adbc0e95879231777113273085b4879d0.png" title=" robot clicks on Bot&oacute;n para iniciar sesi&oacute;n" width="1366"/>
+                <img src="222304d4657593310b987d90cb41501594adb864069ec76c2611af34037c0acb.png" title=" robot clicks on Bot&oacute;n para iniciar sesi&oacute;n (completed)" width="1366"/>
+                <img src="222304d4657593310b987d90cb41501594adb864069ec76c2611af34037c0acb.png" title=" Cuando inicie sesion con correo 'juan.castano166' y contrase&ntilde;a '1018233166' (completed)" width="1366"/>
+                <img src="2de1c71e6aa282a6d814f40ad19c8ea297a5aae3c546aa8a50bad000331e9784.png" title=" Y seleccione ver notas" width="1366"/>
+                <img src="7ae39e72676a7b8917a3164d19216390257ff1f83438940143e193fa72c0d47d.png" title=" Robot ver notas task" width="1366"/>
+                <img src="c94d6f1ea2b15a6c30cc391b95d70825b14f4c5f579cc61e2cc6b4e5744b99ee.png" title=" robot clicks on Link para la pesta&ntilde;a estudiantes" width="1366"/>
+                <img src="aefcb4eb3c7138a6c683ac427a437791ccddbc73720819894e3845d1029ed81a.png" title=" robot clicks on Link para la pesta&ntilde;a estudiantes" width="1366"/>
+                <img src="74237a3136a5063df7340c013eb4608b0965b1df5ce99f1bcc10d5001268da1e.png" title=" robot clicks on Link para la pesta&ntilde;a estudiantes (completed)" width="1366"/>
+                <img src="1cc58b4aa1d568260efec975c0b55464793c71df1e116275d6431544822c93e8.png" title=" robot clicks on Texto para el men&uacute; de notas" width="1366"/>
+                <img src="6d085881cf14bfd8a7bb6fa0faf063b222d1e774345919251ed32f1480947e35.png" title=" robot clicks on Texto para el men&uacute; de notas" width="1366"/>
+                <img src="149e3d418186bbca765d46676b06ee7597d99b198d8cdfe3d38ce42fdefe70d6.png" title=" robot clicks on Texto para el men&uacute; de notas (completed)" width="1366"/>
+                <img src="149e3d418186bbca765d46676b06ee7597d99b198d8cdfe3d38ce42fdefe70d6.png" title=" Robot ver notas task (completed)" width="1366"/>
+                <img src="281923a4f8256de1d19318e5cdb5b259dc4e192fe20523a43aced0d46706db33.png" title=" Y seleccione ver notas (completed)" width="1366"/>
+                <img src="281923a4f8256de1d19318e5cdb5b259dc4e192fe20523a43aced0d46706db33.png" title=" Entonces visualizo la ventana con almenos la materia 'Grupo 001 ET0042 - CIRCUITOS DIGITALES'" width="1366"/>
+                <img src="281923a4f8256de1d19318e5cdb5b259dc4e192fe20523a43aced0d46706db33.png" title=" Robot scroll javascript" width="1366"/>
+                <img src="bc3bbeee4a3fe34b45a37bd9c883d63840afa7a3a95ed18de93e2fb94d6be8ca.png" title=" Robot scroll javascript (completed)" width="1366"/>
+                <img src="14755ffeadb3c2c7f7692a831fed4b9918c89cc60d7a91d858c8537444080c0b.png" title=" Entonces visualizo la ventana con almenos la materia 'Grupo 001 ET0042 - CIRCUITOS DIGITALES' (completed)" width="1366"/>
+                <img src="14755ffeadb3c2c7f7692a831fed4b9918c89cc60d7a91d858c8537444080c0b.png" title=" 1: automatizar proceso de ver nota ({url=https://sicau.pascualbravo.edu.co/SICAU/Account/Login, correo=juan.castano166, contrase&ntilde;a=1018233166, materia=Grupo 001 ET0042 - CIRCUITOS DIGITALES}) (completed): <span class='success-color'>SUCCESS</span>" width="1366"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.7.1</span>
+</div>
+</body>
+</html>
